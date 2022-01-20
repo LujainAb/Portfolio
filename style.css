@@ -1,0 +1,57 @@
+body {
+    font-family: Garamond;
+    background: #f2eee3 ;
+  }
+  h1{
+    text-align: center;
+    font-size: 90px;
+    color: black;
+    margin-top: -60px;
+  }
+  
+  .header{
+    align-content:space-between;
+  }
+  
+  #logo {
+    width: min(50vw, 200px);
+    margin: 10px 60px 10px 60px;
+  }
+  .info-div{
+    margin-left: 28%;
+    width:50%;
+  }
+  
+  #me {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  a , label{
+    text-decoration:none;
+    color: black;
+    font-weight: bold;
+  }
+  input , textarea , select , button {
+    
+    width:30%;
+    padding:10px;
+    margin:10px;
+    border-radius:8px;
+    border:none;
+    background-color:#dedad1;
+  }
+  
+  textarea{
+    width:50%;
+    padding:10px;
+    height:80px;
+    resize: none;
+  }
+  
+  button{
+    background-color:black;
+    color:#f2eee3 ;
+    font-family:Garamond;
+    font-weight: bolder;
+    font-size: 15px;
+  }
