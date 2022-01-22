@@ -1,24 +1,89 @@
+:root{
+  --Dark : #121345;
+  --Mid : #535ef9;
+  --Light : #67b6ff;
+  --gray: #ffffff;
+}
+
 body {
-    font-family: Garamond;
-    background: #f2eee3 ;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; 
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--gray);
+    background: var(--Dark) ;
+    width: 100%; 
+    overflow-x: hidden;
   }
-  h1{
-    text-align: center;
-    font-size: 90px;
-    color: black;
-    margin-top: -60px;
+
+  @media (max-width: 768px){
+    #back{
+    margin-right: -10px;
+    z-index: -1;
+    max-width: 50%;
+    }
+  }
+
+  @media (max-width: 768px){
+    .info {
+      width:75%  !important;
+    }
+
+    #about {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    text-align: left;
+    font-family: Consolas, Calibri;
+    color: var(--Light);
+    margin-top: -40px;
+    font-weight: 800;
+    font-size: clamp(50px, 10vw, 80px); /* to make text responsive*/
+  }
+  h3{
+    padding-left: 5px ;
+    margin-bottom: 25px;
+  }
+
+  #role{
+    font-size: 40px;
+    margin: -50px 0 0;
+    font-size: clamp(35px, 4vw, 50px); /* to make text responsive*/
   }
   
-  .header{
+  header{
     align-content:space-between;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    width: 90%;
+    margin:0 0 60px 0;
+    background: var(--Dark) ;
+    backdrop-filter: blur(10px);
+  }
+
+  div{
+    display: block;
   }
   
   #logo {
-    width: min(50vw, 200px);
-    margin: 10px 60px 10px 60px;
+    width: min(50px, 200px);
+    margin: 10px 20px 10px 20px;
   }
-  .info-div{
-    margin-left: 28%;
+
+  .main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 50vh;
+    margin-top: -40px;
+  }
+
+  .info{
+    margin-left: 15%;
     width:50%;
   }
   
@@ -28,7 +93,7 @@ body {
   }
   a , label{
     text-decoration:none;
-    color: black;
+    color: antiquewhite;
     font-weight: bold;
   }
   input , textarea , select , button {
@@ -40,6 +105,13 @@ body {
     border:none;
     background-color:#dedad1;
   }
+  a{
+    transition: color 200ms ease-out 100ms;
+  }
+  a:hover{
+    color: var(--Light);
+    
+  }
   
   textarea{
     width:50%;
@@ -49,9 +121,61 @@ body {
   }
   
   button{
-    background-color:black;
-    color:#f2eee3 ;
-    font-family:Garamond;
-    font-weight: bolder;
+    background-color:var(--Light);
+    color:var(--Dark) ;
+    font-family: Consolas, cursive;
+    font-weight: bold;
     font-size: 15px;
   }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .sections {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding-right: 30px;
+    width: 500px;
+   }
+
+   #back{
+    position: absolute;
+    top: 10;
+    right: 0;
+    margin-right: -300px;
+    z-index: -1;
+    max-width: 100%;
+    height: auto;
+  }
+
+  li::before {
+    content: "» ";
+    color: var(--Light);
+}
+
+  ul li {
+    flex-direction: row;
+    list-style: none;
+    margin: 0 0 0 -30px ;
+  }
+
+  ::-webkit-scrollbar {
+    width: 20px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
